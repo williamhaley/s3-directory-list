@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>S3 Bucket</title>
+<style type="text/css">
+thead    { border: 1px solid black;                 }
+thead tr { border-bottom: 2px solid black;          }
+td, th   { text-align: left; padding: 0.25em 0.5em; }
+</style>
+</head>
+<body>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Date Modified</th>
+			<th>Size</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<script type="text/javascript">
+(function () {
+	$(document).ready(function () {
+		listObjects({
+			bucketName:      'd.willhaley.com',
+			excludedObjects: ['index.html', 'index.js']
+		});
+	});
+})();
+</script>
+
+<script id="template-s3object" type="text/x-handlebars-template">
+<tr>
+	<td><a href="{{url}}">{{key}}</a></td>
+	<td>{{date}}</td>
+	<td>{{size}}</td>
+</tr>
+</script>
+</body>
+</html>

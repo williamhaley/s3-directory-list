@@ -10,11 +10,11 @@
 
 I am [well aware](#prior-art) that there are a number of solutions to this problem already. However, a late night brute-force attempt to get them working ran into error after error for me. So, I ([like so many others](#prior-art)) created my own solution.
 
-My implementation is meant to be bare bones and clean. It is (hopefully) a good jumping off point if anyone wants a similar solution.
+My implementation is meant to be bare bones and clean. It is (hopefully) a good jumping off point if anyone wants a similar solution. It is not meant to be a complete solution.
 
 The key for me was seeing the syntax of an S3 [REST call](http://d.willhaley.com.s3.amazonaws.com/?list-type=2) in action.
 
-This **only supports** listing files with URLs, size, and dates.
+This **only supports** listing files with URLs, size, and dates. You have to copy `index.html` and `index.js` to _every_ subdirectory where you want to list contents.
 
 [Nolan Lawson's project](https://nolanlawson.com/2013/11/25/s3-bucket-listing-thats-easier-on-the-eyes/) was the best starting off point and provided the most inspiration for my implementation.
 

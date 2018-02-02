@@ -1,9 +1,5 @@
 # S3 Directory List
 
-## Demo
-
-[Live Demo](http://d.willhaley.com)
-
 ![preview.png](preview.png)
 
 # Why?
